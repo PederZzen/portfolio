@@ -1,0 +1,80 @@
+:root {
+    --main-color: #01001B;
+    --accent-color: #BB2649;
+    --main-text-color: #acacac;
+    --accent-text-color: #f1f1f1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    min-width: 300px;
+}
+
+#wrapper {
+    padding: 0 .5rem;
+}
+
+h3 {
+    font-weight: 900;
+    color: var(--accent-text-color);
+    margin-bottom: 2rem;
+}
+
+.text {
+    color: var(--main-text-color);
+    margin-bottom: 2rem;
+}
+
+#top_nav {
+    display: flex;
+    background-color: var(--main-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#logo {
+    font-weight: 700;
+}
+
+#get_in_touch {
+    display: none;
+}
+
+#side_bar {
+    display: none;
+}
+
+/* Hero section */
+
+#hero {
+    height: 100vh;
+    position: relative;
+}
+
+#hero * {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+#hero__content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#hero h1 span {
+    font-size: 4rem;
+    color: var(--accent-color);
+}
