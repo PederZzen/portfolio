@@ -31,42 +31,101 @@ h3 {
 
 .text {
     color: var(--main-text-color);
+    font-size: 1.12rem;
+    line-height: 2rem;
+}
+
+.text br {
+    margin-bottom: 1.5rem;
+}
+
+.text a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.button {
+    text-decoration: none;
+    border-radius: 5rem;
+    position: relative;
+    padding: .5rem 1rem;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    border-radius: 5rem;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.button:hover::after {
+    width: 100%;
 }
 
 #top_nav {
     position: fixed;
-    display: flex;
-    justify-content: space-between;
+    min-width: 300px;
     width: 100%;
-    z-index: 2;
     background-color: var(--main-color);
-    padding: 1rem;
+    z-index: 99;
 }
 
-.showMenu {
+#top_nav div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+#logo {
+    font-weight: 700;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+#menu_icon {
+    cursor: pointer;
+}
+
+#menu_icon:hover {
+    transition: all .3s;
+    opacity: .7;
+}
+
+.show_menu {
     display: block;
 }
 
-.hideMenu {
+.hide_menu {
     display: none;
 }
 
-
 #get_in_touch {
-    text-decoration: none;
     color: var(--accent-color);
     border: 2px solid #BB2649;
-    padding: .5rem 1rem;
-    border-radius: 5rem;
-    position: relative;
-    top: 4rem;
+    margin: 2rem auto;
+    width: 10rem;
+}
+
+#get_in_touch::after {
+    background-color: var(--accent-color);
+}
+
+#get_in_touch:hover {
+    color: var(--main-color);
 }
 
 #side_bar {
     display: none;
 }
-
-/* Hero section */
 
 #hero {
     height: 100vh;
@@ -88,10 +147,20 @@ h3 {
 
 #scroll_down {
     position: absolute;
-    bottom: 5rem;
+    bottom: 10rem;
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
+}
+
+#anchor {
+    position: absolute;
+    bottom: 5rem;
+}
+
+#scroll_down:hover {
+    opacity: .7;
+    transition: all .3s;
 }
 
 #hero h1 span {
@@ -116,6 +185,12 @@ h3 {
     justify-content: space-between;
 }
 
+#tech_icons * {
+    margin: 0 auto;
+    position: relative;
+    height: 2.8rem;
+}
+
 #work_preview {
     display: flex;
     flex-direction: column;
@@ -124,7 +199,10 @@ h3 {
 
 .work_card {
     cursor: pointer;
+    border-radius: 2rem;
     position: relative;
+    overflow: hidden;
+    
 }
 
 .work_card img {
@@ -133,17 +211,25 @@ h3 {
     z-index: 1;
 }
 
+.work_card:hover img {
+    transition: all .4s;
+    transform: scale(1.2);
+}
+
 .work_card_hover {
-    display: none;
+    opacity: 0;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: absolute;
     top: 0;
-    background-color: var(--accent-color);
+    background-color: var(--main-color);
+    border: 1px solid white;
     height: 100%;
     width: 100%;
-    border-radius: 1.2rem;
+    border-radius: 2rem;
     z-index: 2;
+    transition: all .4s;
 }
 
 .work_card_hover p {
@@ -152,37 +238,23 @@ h3 {
 }
 
 .work_card_hover a {
-    text-decoration: none;
     color: var(--accent-text-color);
     border: 2px solid white;
-    border-radius: 5rem;
-    display: block;
-    overflow: hidden;
     width: 10rem;
     padding: .5rem;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
 }
 
 .work_card_hover a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    z-index: -1;
     background-color: var(--accent-text-color);
-    transition: all .3s;
-}
-
-.work_card_hover a:hover::after {
-    width: 100%;
 }
 
 .work_card_hover a:hover {
-    color: var(--accent-color);
+    color: var(--main-color);
+}
+
+footer {
+    margin-bottom: 1rem;
 }
 
 #footer_icons {
@@ -195,13 +267,86 @@ h3 {
 }
 
 @media only screen and (min-width: 450px) {
+
+    #scroll_down {
+        bottom: 5rem;
+    }
+
+    #hero * {
+        font-size: 1.5rem;
+    }
+
+    #hero h1 span {
+        font-size: 5rem;
+    }
+
     #tech_icons {
         padding: 0 2rem;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .work_card {
+        max-width: 350px;
+        margin: auto;
     }
 }
 
 @media only screen and (min-width: 750px) {
-    #menu_icon {
+
+    #top_nav div div{
         display: none;
+    }
+
+    .hide_menu {
+        display: block;
+    }
+
+    #top_nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #get_in_touch {
+        margin: 1rem;
+    }
+
+    #hero * {
+        font-size: 2rem;
+    }
+
+    #hero h1 span {
+        font-size: 8rem;
+    }
+
+    #who .text,
+    #how .text,
+    #what .text {
+        max-width: 800px;
+        margin: auto auto 4rem auto;
+    }
+
+    #tech_icons {
+        grid-template-columns: auto auto auto auto;
+        max-width: 700px;
+        gap: 5rem;
+    }
+
+    #tech_icons * {
+        height: 3.5rem;
+    }
+
+    #work_preview {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    #work_preview {
+        grid-template-columns: auto auto auto;
     }
 }

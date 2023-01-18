@@ -1,13 +1,13 @@
 const menuIcon = document.getElementById("menu_icon");
-const getInTouch = document.getElementById("get_in_touch");
+const getInTouch = document.getElementById("get_in_touch").classList;
 
-export function topMenu () {
-    if (getInTouch.classList.contains("showMenu")) {
-        getInTouch.classList.remove("showMenu");
-        getInTouch.classList.add("hideMenu");
+export const topMenu = () => {
+    if (getInTouch.contains("show_menu")) {
+        getInTouch.remove("show_menu");
+        getInTouch.add("hide_menu");
     } else {
-        getInTouch.classList.add("showMenu"); 
-        getInTouch.classList.remove("hideMenu"); 
+        getInTouch.add("show_menu"); 
+        getInTouch.remove("hide_menu"); 
     }
 }
 
