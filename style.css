@@ -222,11 +222,6 @@ h3 {
     z-index: 1;
 }
 
-.work_card:hover img {
-    transition: all .4s;
-    transform: scale(1.2);
-}
-
 .work_card_hover {
     opacity: 0;
     display: flex;
@@ -275,9 +270,10 @@ footer {
     width: 100%;
 }
 
-#footer_icons *{
+#footer_icons * {
     height: 2rem;
     margin: .8rem;
+    text-decoration: none;
 }
 
 @media only screen and (min-width: 450px) {
@@ -372,7 +368,11 @@ footer {
     }
 
     #what {
-        margin-top: 10rem;
+        margin-top: 20rem;
+    }
+
+    #what h3 {
+        padding-top: 8rem;
     }
 
     #tech_icons {
@@ -389,6 +389,10 @@ footer {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: center;
+    }
+
+    .work_card {
+        height: 100%;
     }
 
 }

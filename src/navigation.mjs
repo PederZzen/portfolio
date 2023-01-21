@@ -14,7 +14,6 @@ export const topMenu = () => {
 menuIcon.addEventListener("click", topMenu);
 
 const sections = document.querySelectorAll("section");
-const height = window.innerHeight;
 const sideBar = document.querySelector("#side_bar"); 
 
 const reset = () => {
@@ -24,17 +23,16 @@ const reset = () => {
 }
 
 window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
     sections.forEach((section, i) => {
-        if (section.offsetTop < scrollTop + height / 2 && scrollTop < section.offsetTop + height / 2) {
+        if (section.getBoundingClientRect().top < window.innerHeight / 2 && section.getBoundingClientRect().bottom > window.innerHeight / 2) {
             reset();
             sideBar.children[i].classList.add("side_bar__dot__selected");
         }
-    })
-})
+    });
+});
 
 document.querySelectorAll(".side_bar__dot").forEach((dot, i) => {
     dot.addEventListener("click", () => {
-        window.scrollTo({ top: i * height })
-    })
-})
+        window.scrollTo({ top: sections[i].offsetTop });
+    });
+});
