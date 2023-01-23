@@ -202,7 +202,7 @@ h3 {
     height: 2.8rem;
 }
 
-#work_preview {
+#work_preview div {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -213,6 +213,7 @@ h3 {
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
+
 }
 
 .work_card img {
@@ -386,9 +387,16 @@ footer {
     }
 
     #work_preview {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    #work_preview div {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: center;
+        gap: 2rem;
     }
 
     .work_card {
@@ -399,6 +407,10 @@ footer {
 
 @media only screen and (min-width: 1000px) {
     #work_preview {
+        flex-direction: column;
+    }
+
+    #work_preview div {
         grid-template-columns: auto auto auto;
     }
 }
