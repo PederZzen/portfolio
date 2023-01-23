@@ -1,5 +1,4 @@
 import { topMenu } from "./src/navigation.mjs";
-
 import { scrollDown } from "./src/utils.mjs";
 import { scrollUp } from "./src/utils.mjs";
 

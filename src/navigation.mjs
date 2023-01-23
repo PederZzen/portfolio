@@ -1,3 +1,7 @@
+/**
+ * Show and hide the elements of the navbar when clicking on the menu icon
+ */
+
 const menuIcon = document.getElementById("menu_icon");
 const getInTouch = document.getElementById("get_in_touch").classList;
 
@@ -13,10 +17,14 @@ export const topMenu = () => {
 
 menuIcon.addEventListener("click", topMenu);
 
+/**
+ * Handles the navigation/ "progress bar" on the left side of the screen (for screen size 750px and up)
+ */
+
 const sections = document.querySelectorAll("section");
 const sideBar = document.querySelector("#side_bar"); 
 
-const reset = () => {
+const unselect = () => {
     for (let i = 0; i < sideBar.children.length; i++) {
         sideBar.children[i].classList.remove("side_bar__dot__selected");
     }
@@ -25,7 +33,7 @@ const reset = () => {
 window.addEventListener("scroll", () => {
     sections.forEach((section, i) => {
         if (section.getBoundingClientRect().top < window.innerHeight / 2 && section.getBoundingClientRect().bottom > window.innerHeight / 2) {
-            reset();
+            unselect();
             sideBar.children[i].classList.add("side_bar__dot__selected");
         }
     });
