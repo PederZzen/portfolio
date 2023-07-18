@@ -1,30 +1,27 @@
 import React from "react";
 import { Wrapper } from "./style";
+import headshot from "./Portrett.jpg";
 
 const About = () => {
   return (
     <Wrapper className="maxWidth headerStyling">
       <h1>About</h1>
       <span>About</span>
-      <div>
+      <div id="content">
         <div>
-          Jeg er en frontend-utvikler som nylig har fullført mitt utdanningsløp
-          på Noroff i Bergen. Gjennom studiene har jeg fått erfaring med å bygge
-          responsive og brukervennlige løsninger, med fokus på universell
-          utforming i tråd med WCAG-retningslinjer. Jeg har også lært å jobbe
-          med rammeverk som React, og har en god forståelse for
-          versjonskontrollsystemer som Git.
+          <div>
+            I am a front-end developer fron Norway with experience in building
+            responsive and user-friendly solutions, with a focus on universal
+            design in line with WCAG guidelines.
+          </div>
+          <div>
+            Currently, i am working freelance as a consultant at Exuma, where I
+            create, update, and modernize various websites.
+          </div>
+          <div>My programming weapon-of-chice is React.</div>
         </div>
         <div>
-          Ved siden av studiene har jeg hatt en deltidsjobb som konsulent i
-          Exuma. Her har jeg bistått i opprettelse, oppdatering og modernisering
-          av ulike nettsider. Dette har gitt meg verdifull erfaring med å jobbe
-          selvstendig, kommunisere effektivt og løse problemer under tidspress.
-        </div>
-        <div>
-          Med en sterk lidenskap for webutvikling og teknologi, er jeg nå på
-          utkikk etter en fulltidsjobb hvor jeg kan fortsette å utvikle meg selv
-          og mine ferdigheter.
+          <img src={headshot} alt="Portrait of Espen" />
         </div>
       </div>
     </Wrapper>
