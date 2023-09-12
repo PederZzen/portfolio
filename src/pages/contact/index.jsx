@@ -7,8 +7,8 @@ import { Wrapper } from "./style";
 const Contact = () => {
   return (
     <Wrapper className="maxWidth headerStyling">
-      <h1>Contact</h1>
-      <span>Contact</span>
+      <h1>Kontakt</h1>
+      <span>Kontakt</span>
       <div>
         <FontAwesomeIcon icon={faPhone} />
         <a href="tel:+4741200854">+47 412 00 854</a>

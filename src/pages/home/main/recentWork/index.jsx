@@ -6,7 +6,7 @@ import { Wrapper } from "./style";
 const RecentWork = () => {
   return (
     <Wrapper className="maxWidth">
-      <h2>Recent work</h2>
+      <h2>Nylig arbeid</h2>
       {projects.map((project, idx) => {
         if (project.recent) {
           return <Project idx={idx} project={project} />;

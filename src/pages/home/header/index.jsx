@@ -7,9 +7,9 @@ const Header = () => {
     <Wrapper>
       <div className="content">
         <h1>
-          Hi, i'm <span>Espen</span>
+          Hei, jeg er <span>Espen.</span>
           <br />
-          Frontend Developer
+          Frontend-Utvikler
         </h1>
       </div>
       <div>

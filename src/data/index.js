@@ -9,30 +9,30 @@ import telegrafenMedia from "./media/telegrafen.png";
 export const projects = [
   {
     name: "Holidaze",
-    type: "Booking site",
+    type: "Bookinger",
     recent: true,
     description:
-      "This was a school assignment my last year at Noroff School of Technology and Design. The task was to create a site were users could sign up for an account, and rent out their homes or rent someone elses. The project is built using React.",
+      "Denne siden er bygget med React, der Styled Components og biblioteket Ant Design er brukt for styling. Siden er en slags AirBnb-klone, med alt det innebærer.",
     media: holidazeMedia,
     url: "https://holidazenorway.netlify.app/",
     github: "https://github.com/PederZzen/projectexam2",
   },
   {
     name: "Yuuup!",
-    type: "Auction site",
+    type: "Auksjoner",
     recent: true,
     description:
-      "This is an online auction site where users can sign up, browse and bid on various items, and list their own items for bidding. It offers a user-friendly interface, real-time bidding updates, personalized profiles, and secure authentication. It was built in vanilla JavaScript as an assignment during my stuies at Noroff. ",
+      "En nettbasert auksjonsside der brukere kan registrere seg, bla gjennom og by på ulike varer, samt legge ut egne varer for auksjon. Den tilbyr et brukervennlig grensesnitt, oppdateringer i sanntid for budgivning, personlige profiler og sikker autentisering. Den ble bygget med vanilla JavaScript.",
     media: yuuupMedia,
     url: "https://yuup.netlify.app/",
     github: "https://github.com/PederZzen/Semester-project-2",
   },
   {
     name: "BuyStuff.no",
-    type: "Online store",
+    type: "Nettbutikk",
     recent: true,
     description:
-      "This online store was built using React. It offers the possibility to view a selection of items from an API, and add them to your shopping cart. It was the first big React assignment during my time at Noroff.",
+      "En nettbutikk for kjøp og salg av ulike gjenstander. Her har man handlekurv, checkout og det man forventer av en slik side.",
     media: buyStuffMedia,
     url: "https://buystuffnorway.netlify.app/",
     github: "https://github.com/PederZzen/React_CA",
@@ -42,25 +42,25 @@ export const projects = [
     type: "Restaurant",
     recent: false,
     description:
-      "Built with WordPress for a restaurant in Drøbak that offers a wide selection of foods from Indian cuisine to more modern dishes.",
+      "Telegrafen Drøbak er en restaurant som tilbyr en rekke indiske tradisjonsretter og noen moderne klassikere.",
     media: telegrafenMedia,
     url: "https://telegrafendrobak.no/",
   },
   {
     name: "Livsløpet",
-    type: "Blog",
+    type: "Juridisk Rådgivning",
     recent: false,
     description:
-      "Built with WordPress for a client that offers legal advice for the more day-to-day problems that you might face.",
+      "Livsløpet er bloggen for deg som har ulike juridiske spørsmål, og kanskje trenger noen gode råd.",
     media: livsløpetMedia,
     url: "https://livsløpet.no/",
   },
   {
     name: "WG Plastsveis",
-    type: "Plastic welder",
+    type: "Plastikksveising",
     recent: false,
     description:
-      "WG Plastsveis provides services within plastic welding and special parts in all of Norway. This website was built using WordPress.",
+      "WG Plastsveis har lang fartstid og tilbyr tjenester innen plastsveising. De holder til i Holmestrand og har en kundebase som inkluderer hele Norge.",
     media: wgplastMedia,
     url: "https://wgplastsveis.no/",
   },
@@ -69,7 +69,7 @@ export const projects = [
     type: "Donut shop",
     recent: false,
     description:
-      "Dånøts is a friendly little café in Asker that serves you freshly baked donuts and newly brewed coffeé. Their website is built with WordPress.",
+      "Dånøts er en koselig liten kafé i Asker som serverer deilige og spesiallagde donuts.",
     media: donutsMedia,
     url: "https://www.danots.no/",
   },

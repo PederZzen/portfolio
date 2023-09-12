@@ -1,20 +1,22 @@
 import React from "react";
 import { Wrapper } from "./style";
+import { colors } from "../../../../utils/constants";
 
 const About = () => {
   return (
     <Wrapper>
       <div className="maxWidth">
-        <h2>Who am i?</h2>
+        <h2>Hvem er jeg?</h2>
         <p>
-          I have always been doodling in my notebooks. If you go through one of
-          them, it might actually be hard to figure out what is really going on
-          between all the lines, spaceships and corny-looking people. <br /> For
-          all my life i have been a creative person who loves thinking outside
-          of the box, and doing things a little bit differently. <br /> Combined
-          with my ever-increasing interest in anything with an electrical
-          circut, i have channeled all of this into my greatest passion.
-          Creating beautiful websites for you.
+          Jeg er en frontend-utvikler med et øye for detaljer og en middels stor
+          kaffeavhegighet. Min lidenskap er å bygge ting ved hjelp av logikk,
+          kode og Lofi Jazz på Spotify.
+          <br /> Dersom du ikke synes dette var utdypende nok, så finner du
+          flere ord og setninger på{" "}
+          <a href="/about" style={{ color: colors.accent }}>
+            om meg
+          </a>{" "}
+          siden.
         </p>
       </div>
     </Wrapper>

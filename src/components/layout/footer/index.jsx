@@ -4,11 +4,8 @@ import { Wrapper } from "./style";
 const Footer = () => {
   return (
     <Wrapper>
-      <p>Fueled by React, coffeé and love</p>
-      <p>
-        Created by
-        <span> Espen Holm Pedersen</span>
-      </p>
+      <p>Bygget med React, kjærlighet og en solid mengde kaffe.</p>
+      <p>&#169; Espen Holm Pedersen</p>
     </Wrapper>
   );
 };

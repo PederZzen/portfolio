@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   gap: 0.5rem;
 
-  span {
-    font-weight: 700;
+  p {
+    font-size: 0.8rem;
   }
 `;

@@ -25,9 +25,9 @@ const Header = () => {
         )}
         {mobile || windowWidth > 750 ? (
           <div id="menu">
-            <Link to="/projects">Projects</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/projects">Prosjekter</Link>
+            <Link to="/about">Om meg</Link>
+            <Link to="/contact">Kontakt</Link>
           </div>
         ) : null}
       </div>

@@ -11,7 +11,7 @@ const Details = ({ project }) => {
       <p>{project.description}</p>
       <div>
         <a href={project.url} target="_blank" rel="noreferrer">
-          <button className="button">See project</button>
+          <button className="button">Se prosjekt</button>
         </a>
         {project.github ? (
           <a id="gitHub" href={project.github} target="_blank" rel="noreferrer">
